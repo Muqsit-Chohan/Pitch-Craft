@@ -5,7 +5,7 @@ import { auth } from "../firebase";
 import "../Home/home.css";
 import { FaUserCircle } from "react-icons/fa";
 
-export default function Dashboard() {
+const Dashboard = () => {
   const [user, setUser] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function Dashboard() {
             onClick={() => setShowMenu(!showMenu)}
             className="flex items-center gap-2 bg-gradient-to-br from-white to-gray-100 border border-gray-300 px-4 py-1.5 rounded-full cursor-pointer hover:from-gray-50 hover:to-gray-200 transition-all duration-300"
           >
-            <span className="text-gray-800 font-medium hidden sm:inline">
+            <span className="text-gray-400 font-medium hidden sm:inline">
               {user?.displayName || "User"}
             </span>
             <FaUserCircle size={28} color="#333" />
@@ -80,3 +80,5 @@ export default function Dashboard() {
     </div>
   );
 }
+
+export default Dashboard;
