@@ -7,10 +7,7 @@ It is built with **React + Vite**, styled using **Tailwind CSS**, and powered by
 
 ## 🌐 Live Demo
 
-- [Main Page](https://pictchcraft-muqsit.netlify.app/)
-- [Dashboard](https://pictchcraft-muqsit.netlify.app/dashboard)
-- [Create Pitch](https://pictchcraft-muqsit.netlify.app/creatPitch)
-- [Generated Pitch](https://pictchcraft-muqsit.netlify.app/generatedPitch)
+- [Netlify](https://pictchcraft-muqsit.netlify.app/)
 
 ---
 
@@ -40,8 +37,6 @@ It is built with **React + Vite**, styled using **Tailwind CSS**, and powered by
 ## 🚧 Future Improvements
 
 - Export pitch as PDF or PPT
-- Add templates and themes
-- Add collaboration feature
 - AI tone customization (formal, casual, investor-focused)
 - Dark/Light mode toggle
 
@@ -49,12 +44,12 @@ It is built with **React + Vite**, styled using **Tailwind CSS**, and powered by
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/pitchcraft.git
-cd pitchcraft
+- git clone https://github.com/your-username/pitchcraft.git
+- cd pitchcraft
 
 ### 2. Install Dependencies
 
-**npm install**
+- npm install
 
 ### 3. Firebase Setup
 
