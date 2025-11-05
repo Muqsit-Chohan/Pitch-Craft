@@ -21,20 +21,20 @@ const CreatPitch = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const docRef = await addDoc(collection(db, "pitchData"), {
-        title: Data.title,
-        description: Data.description,
-        industry: Data.industry,
-        length: Data.length,
-        createdAt: new Date(),
-      });
+   try {
+  const docRef = await addDoc(collection(db, "pitchData"), {
+    title: Data.title,
+    description: Data.description,
+    industry: Data.industry,
+    length: Data.length,
+    createdAt: new Date(),
+  });
 
       console.log("✅ Pitch added with ID:", docRef.id);
       alert("Pitch added successfully ✅");
 
       // Navigate to generated pitch page
-      navigate(`/generatedPitch/,${docRef.id}`);
+      navigate(`/generatedPitch/${docRef.id}`);
 
       // Clear form
       setData({ title: "", description: "", industry: "", length: "" });
@@ -47,12 +47,12 @@ const CreatPitch = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-6">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">🎤 Create Pitch</h1>
+    <div className="min-h-screen bg-[#1f242d] flex flex-col justify-center items-center p-6">
+      <h1 className="text-3xl font-bold mb-6 text-white">Create Pitch</h1>
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col p-8 bg-white rounded-2xl shadow-lg w-full max-w-md gap-4"
+        className="flex flex-col p-8 bg-[#10101a] rounded-2xl shadow-lg w-full max-w-md gap-4"
       >
         <input
           type="text"
@@ -60,7 +60,7 @@ const CreatPitch = () => {
           value={Data.title}
           onChange={handleInputChange}
           placeholder="Pitch Title"
-          className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+          className="p-3 border border-gray-400 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
         />
 
         <textarea
@@ -69,7 +69,7 @@ const CreatPitch = () => {
           onChange={handleInputChange}
           placeholder="Pitch Description"
           rows="3"
-          className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+          className="p-3 border border-gray-400 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
         ></textarea>
 
         <input
@@ -78,7 +78,7 @@ const CreatPitch = () => {
           value={Data.industry}
           onChange={handleInputChange}
           placeholder="Industry (e.g. Tech, Fashion, Finance)"
-          className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+          className="p-3 border border-gray-400 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
         />
 
         <input
@@ -87,16 +87,16 @@ const CreatPitch = () => {
           value={Data.length}
           onChange={handleInputChange}
           placeholder="Pitch Length (e.g. Short, Medium, Long)"
-          className="p-3 border rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
+          className="p-3 border border-gray-400 text-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 outline-none"
         />
 
         <button
           type="submit"
           disabled={loading}
-          className={`w-full text-white p-3 rounded-lg transition ${
+          className={`w-full text-[#10101a] p-3 rounded-lg transition ${
             loading
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
+              : "bg-[#7cf03d] hover:bg-[#5fb92f] text-[#10101a] cursor-pointer"
           }`}
         >
           {loading ? "Adding..." : "Add Pitch"}
