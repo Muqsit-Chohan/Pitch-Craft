@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { FaUserCircle } from "react-icons/fa";
-import "./dashboard.css"; // ✅ import CSS
 
 export default function Home() {
   const [user, setUser] = useState(null);
