@@ -5,7 +5,7 @@ import { auth } from "../firebase";
 import "../Home/home.css";
 import { FaUserCircle } from "react-icons/fa";
 
-export default function Home() {
+export default function Dashboard() {
   const [user, setUser] = useState(null);
   const [showMenu, setShowMenu] = useState(false);
   const navigate = useNavigate();
