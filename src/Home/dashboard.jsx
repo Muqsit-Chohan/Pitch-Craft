@@ -32,7 +32,7 @@ const Dashboard = () => {
   return (
     <div className=" bg-[#1f242d] font-[Poppins]">
       {/* ===== NAVBAR ===== */}
-      <nav className="w-full bg-gradient-to-r bg-[#1f242d] text-white shadow-md fixed top-0 left-0 z-50 flex justify-between items-center px-10 py-3">
+      <nav className="w-full bg-[#1f242d] text-white shadow-md fixed top-0 left-0 z-50 flex justify-between items-center px-10 py-3">
         <h2 className="text-2xl font-semibold tracking-wide text-white">
           My App
         </h2>
@@ -40,7 +40,7 @@ const Dashboard = () => {
         <div className="relative">
           <div
             onClick={() => setShowMenu(!showMenu)}
-            className="flex items-center gap-2 bg-gradient-to-br from-white to-gray-100 border border-gray-300 px-4 py-1.5 rounded-full cursor-pointer hover:from-gray-50 hover:to-gray-200 transition-all duration-300"
+            className="flex items-center gap-2 from-white to-gray-100 border border-gray-300 px-4 py-1.5 rounded-full cursor-pointer hover:from-gray-50 hover:to-gray-200 transition-all duration-300"
           >
             <span className="text-gray-400 font-medium hidden sm:inline">
               {user?.displayName || "User"}
